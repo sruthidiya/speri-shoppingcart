@@ -1,0 +1,19 @@
+<div class="img">
+<br>
+<br>
+<div class=" container col-md-6 col-sm-4">
+    <h2 class="text-success">Update Product </h2>
+ <label>Id</label>
+ <input  [(ngModel)] = "ProductId" (change) = "onCustomerIdValueChanged($event)"  type="text" name="ProductId" id="" class="form-control">
+ <label>Product name</label>
+ <input [(ngModel)] = "ProductName" (change) = "onCustomerNameValueChanged($event)" type="text" name="ProductName" id="" class="form-control">
+ <label>Description</label>
+ <input   [(ngModel)] = "ProductDescription" (change) = "onCityValueChanged($event)" type="text" name="ProductDescription" id="" class="form-control">
+ <label>Price</label>
+  <input  [(ngModel)] = "ProductPrice" (change) = "onGradeValueChanged($event)" type="text" name="ProductPrice" id="" class="form-control">
+ <br>
+  <button   (click)="updatep()"  class="btn btn-dark">View</button>
+  
+  <button  (click) = "UpdateProductDetails(productDetail)" class="btn btn-success">Update Product</button>
+</div> 
+</div>

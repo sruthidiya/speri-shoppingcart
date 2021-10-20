@@ -1,0 +1,30 @@
+
+
+<div class="img">
+  <br>
+<br>
+<br>
+  <div class=" container col-md-6 col-sm-4">
+    <h2 class="text-success">Product Details</h2>
+ <label>Id</label>
+ <input  [(ngModel)] = "ProductId" (change) = "onCustomerIdValueChanged($event)"  type="text" name="ProductId" id="" class="form-control">
+ <label>Product name</label>
+ <input [(ngModel)] = "ProductName" (change) = "onCustomerNameValueChanged($event)" type="text" name="ProductName" id="" class="form-control">
+ <label>Description</label>
+ <input   [(ngModel)] = "ProductDescription" (change) = "onCityValueChanged($event)" type="text" name="ProductDescription" id="" class="form-control">
+ <label>Price</label>
+  <input  [(ngModel)] = "ProductPrice" (change) = "onGradeValueChanged($event)" type="text" name="ProductPrice" id="" class="form-control">
+ 
+ <div class="form-label-group">
+    <label  for="filebutton">Image</label>
+    <div >
+      <input id="filebutton" name="filebutton" class="input-file" type="file">
+    </div>
+    <br>
+    <div>
+ <button   class="btn btn-primary"  (click) = "InsertCustomerData()"   >Add Product</button> &nbsp;
+
+</div>
+  </div>
+
+</div>

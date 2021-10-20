@@ -1,0 +1,27 @@
+<div class="img">
+
+    <div class="container">
+        <div>
+        <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" class="form-signin">
+            <br> <br> <br>
+            <h2 class="text-center ">PLEASE LOGIN IN </h2>
+            <br> <br> 
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input  type="text" id="usernameId" class="form-control" formControlName="username" placeholder="Username" required autofocus [ngClass]="{ 'is-invalid': submitted && getForm.email.errors }">
+            <br>
+            <div *ngIf="submitted && getForm.email.errors" class="invalid-feedback">
+                <div *ngIf="getForm.email.errors.required">Email is required</div>
+                <div *ngIf="getForm.email.errors.email">Email must be a valid email address</div>
+            </div>
+            <label for="inputPassword" class="sr-only">Password</label>
+            
+            <input [ngClass]="{ 'is-invalid': submitted && getForm.firstName.errors }" type="password" id="inputPassword" class="form-control" formControlName="password" placeholder="Password" required>
+            <br>
+             <div *ngIf="submitted && getForm.firstName.errors" class="invalid-feedback">
+                    <div *ngIf="getForm.firstName.errors.required">First Name is required</div>
+                </div>
+            <button class="btn btn-lg btn btn-dark btn-block " type="submit">Login </button>
+        </form>
+    </div>
+    </div>
+    </div>

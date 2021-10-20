@@ -1,0 +1,33 @@
+
+    <div class="container">
+        <div class="row mt-4">
+          <a href="/addproduct" class="btn btn-success btn-lg ml-auto mb-5">Add product</a>
+        </div>
+  
+  
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ProductName </th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          
+          
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr scope = "row" *ngFor = "let items of productDetails">
+             
+              <td>{{ items.ProductName }}</td>
+              <td>{{ items.ProductDescription }}</td>
+              <td>{{ items.ProductPrice }}</td>
+             
+              <td><a href='/updateproduct/{{items.ProductId}}' (click) = "GetProductDetailsById(items.ProductId)"class="btn btn-primary" >Update</a></td>
+              
+               <td><button (click) = "DeleteProductDetails(items.ProductId)" class="btn btn-danger">Delete</button></td>
+          </tr>  
+      </tbody>
+    </table>
+    </div>
